@@ -5,16 +5,25 @@ let area = PI * radius * radius;
 console.log("Area of circle:", area);
 
 const one = 1;
-const two = 2;
+const two = "2";
 
 let result = one + two;
-console.log("Sum:", result);
+console.log(result);
 
-// Scope
-let course = "CSE131"; // Global scope
+let course = "CSE131"; //global scope
+if (true) {
+  let student = "John";
+  console.log(course); //works just fine, course is global
+  console.log(student); //works just fine, it's being accessed within the block
+}
+console.log(course); //works fine, course is global
+console.log(student); //does not work, can't access a block variable outside the block
+
+// My Scope
+let course2 = "CSE131"; // Global scope
 if (true) {
   let student = "Jackson"; // Block scope
-  console.log("Inside block:", course, student);
+  console.log("Inside block:", course2, student);
 }
 // console.log("Outside block:", student); // This would cause an error
-console.log("Outside block:", course, "Error, 'student' is not defined");
+console.log("Outside block:", course2, "Error, 'student' is not defined");
