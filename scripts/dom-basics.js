@@ -28,12 +28,48 @@ image.setAttribute("src", "../ponder/images/logos.png");
 //image.src = "../ponder/images/logos.png";
 
 // Class starting code
+let cssId = document.querySelector("#css");
+let htmlId = document.querySelector("#html");
+let jsId = document.querySelector("#js");
+
 let selectElem = document.getElementById("webdevlist");
 selectElem.addEventListener("change", function () {
   let codeValue = selectElem.value;
   console.log(codeValue);
-  if (codeValue === "html") {
-    document.querySelector("#html").style.color = "blue";
+  // ----------------------
+  // HTML
+  // if (codeValue === "html") {
+  //   document.querySelector("#html").style.color = "blue";
+  // } else {
+  //   document.querySelector("#html").style.color = "red";
+  // }
+  // ----------------------
+  // CSS
+  // if (codeValue === "css") {
+  //   document.querySelector("#css").style.color = "blue";
+  // } else {
+  //   document.querySelector("#css").style.color = "red";
+  // }
+  // ----------------------
+  // JS
+  // if (codeValue === "js") {
+  //   document.querySelector("#js").style.color = "blue";
+  // } else {
+  //   document.querySelector("#js").style.color = "red";
+  // }
+  // ----------------------
+  // document.getElementById(codeValue).style.color = "blue";
+  // ----------------------
+  // BEST OPTION
+  // Loop through options
+  for (let option of selectElem.options) {
+    if (option.value === "default") continue; // skip "Choose One:"
+
+    if (option.value === codeValue) {
+      document.getElementById(option.value).style.color = "blue";
+    } else {
+      document.getElementById(option.value).style.color = "red";
+    }
   }
 });
 
