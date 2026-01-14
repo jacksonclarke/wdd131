@@ -83,6 +83,11 @@ ol li:last-child {
     height: auto;
 }
 
+.dark-mode {
+    background-color: #333333;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 40px 30px;

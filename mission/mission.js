@@ -8,11 +8,9 @@ function changeTheme() {
   let current = selectElem.value;
   if (current == "dark") {
     logo.setAttribute("src", "byui-logo-white.png");
-    document.body.style.backgroundColor = "#333333";
-    document.body.style.color = "#fff";
+    document.body.classList.add("dark-mode");
   } else {
     logo.setAttribute("src", "byui-logo.webp");
-    document.body.style.backgroundColor = "#fff";
-    document.body.style.color = "#000";
+    document.body.classList.remove("dark-mode");
   }
 }
