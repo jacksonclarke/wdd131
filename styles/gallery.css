@@ -31,8 +31,10 @@ dialog {
 }
 .close-viewer {
     position: absolute;
-    top: 10vh;
-    right: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    top: 9vh;
+    right: 9vh;
     padding: 3px 6px;
     font-size: 1.5em;
 }
