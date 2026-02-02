@@ -39,18 +39,28 @@ img {
   border: 1px solid #ccc;
   box-shadow: 5px 5px 5px;
 }
+
 nav {
   text-align: center;
 }
+
 nav a {
   font-size: 1.25em;
   padding: 20px;
   color: white;
-  display: none;
+  display: none; /* Hidden by default on mobile */
 }
+
+nav.show a {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 nav a:hover {
   text-decoration: none;
   color: #616061;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .menu-btn {
   font-size: 1.25em;
@@ -68,10 +78,76 @@ button p {
 footer {
   text-align: center;
 }
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+figure img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 15px black;
+  display: block;
+  margin: 0 auto;
+}
+
+/* modal */
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Make sure the backdrop doesn't interfere */
+dialog::backdrop {
+  background: transparent;
+}
+
+dialog img {
+  width: 60vw;
+  min-width: 250px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 20vh auto;
+  /* width: 90%;
+    max-width: 800px;
+    max-height: 800px;
+    object-fit: cover;
+    display: block;
+    margin: 10vh auto; */
+}
+
+.close-viewer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5em;
+  border: 1px solid white;
+  cursor: pointer;
+  z-index: 10; /* Ensure button is on top */
+}
 
 @media screen and (min-width: 700px) {
   main {
     grid-template-columns: 1fr 1fr;
+  }
+  dialog img {
+    width: 55vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* margin: 10vh auto; */
+  }
+
+  .close-viewer {
+    top: 3rem;
+    right: 3rem;
   }
 }
 
@@ -85,5 +161,23 @@ footer {
   }
   nav a {
     display: inline;
+  }
+  dialog img {
+    width: 40vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* margin: 10vh auto; */
+  }
+
+  .close-viewer {
+    top: 3rem;
+    right: 3rem;
+  }
+  .viewer {
+    margin: 50px;
+    padding: 50px;
+  }
+  .viewer img {
+    max-width: 800px;
   }
 }
