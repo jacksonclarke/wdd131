@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jackson Clarke" />
+    <meta name="description" content="Credit Card Form Assignment" />
+    <link rel="stylesheet" href="credit.css" />
+    <title>CreditCard Form</title>
+  </head>
+  <body>
+    <form class="form-grid" autocomplete="off">
+      <!-- CARD BACK (sits behind, column 2) -->
+      <div class="card-back">
+        <div class="card-back_stripe"></div>
+        <div class="card-back_cvc-area">
+          <div class="card-back_cvc-label">CVC/CVV</div>
+          <input
+            class="card-back_cvc-input"
+            type="text"
+            id="cvc"
+            name="cvc"
+            placeholder="CVC"
+          />
+        </div>
+      </div>
+
+      <!-- CARD FRONT (column 1, z-index on top) -->
+      <div class="card-front">
+        <!-- Row 1: Total + Chip -->
+
+        <div class="card-front_total">TOTAL: $199</div>
+
+        <div class="chip-icon">
+          <span>💳</span>
+        </div>
+
+        <!-- Row 2: Card Number -->
+        <div class="card-front_number-group">
+          <div class="field-label">Card Number</div>
+          <input
+            class="field-input"
+            type="text"
+            maxlength="19"
+            placeholder="1234 5678 9101 1020"
+          />
+        </div>
+
+        <!-- Row 3: Holder + Expiry -->
+        <!-- <div class="card-front_bottom"> -->
+        <div class="card-holder">
+          <div class="field-label">Card Holder</div>
+          <input class="field-input" type="text" placeholder="John Doe" />
+        </div>
+        <!-- <div class="expiration">
+          <div class="field-label">Expiration</div>
+          <div class="card-front_expiry-group">
+            <input
+              class="field-input field-input--sm"
+              type="text"
+              maxlength="2"
+              placeholder="MM"
+            />
+            <input
+              class="field-input field-input--sm"
+              type="text"
+              maxlength="2"
+              placeholder="YY"
+            />
+          </div>
+        </div> -->
+        <div id="cardExpiration">
+          <label for="expirationDate">EXPIRATION</label>
+          <input
+            type="text"
+            id="month"
+            name="expMonth"
+            placeholder="MM"
+            aria-labelledby="expirationDate"
+          />
+          <input
+            type="text"
+            id="year"
+            name="expYear"
+            placeholder="YY"
+            aria-labelledby="expirationDate"
+          />
+        </div>
+        <!-- </div> -->
+      </div>
+      <!-- /card-front -->
+
+      <!-- SUBMIT ROW (row 3 of form-grid) -->
+      <div class="form-grid_submit-row">
+        <button class="btn-submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
