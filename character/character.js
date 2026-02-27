@@ -6,6 +6,7 @@ let character = {
     health: 100,
     attacked: function(){
         if (this.health < 20) {
+            this.health = 0;
             alert("Character Died");
         } else {
             this.health -= 20
@@ -18,6 +19,16 @@ let character = {
 
 document.querySelector("img").setAttribute("src", character.sourceImg);
 document.querySelector("h2").textContent = character.name;
-document.querySelector(".stats");
+// make the stat names bold and each stat on a new line
 
+document.querySelector("#stat").innerHTML = `<strong>Class:</strong> ${character.class}<br><strong>Level:</strong> ${character.level}<br><strong>Health:</strong> ${character.health}`;
 
+// add event listeners to the buttons
+document.querySelector("#attack").addEventListener("click", function(){
+    character.attacked();
+    document.querySelector("#stat").innerHTML = `<strong>Class:</strong> ${character.class}<br><strong>Level:</strong> ${character.level}<br><strong>Health:</strong> ${character.health}`;
+});
+document.querySelector("#levelUp").addEventListener("click", function(){
+    character.levelUp();
+    document.querySelector("#stat").innerHTML = `<strong>Class:</strong> ${character.class}<br><strong>Level:</strong> ${character.level}<br><strong>Health:</strong> ${character.health}`;
+});
