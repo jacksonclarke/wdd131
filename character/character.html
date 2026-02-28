@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A Character Card showing a lizard dude" />
 
-    <!-- TODO: Fill in the links with real images -->
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Character Card" />
@@ -17,9 +16,10 @@
       property="og:url"
       content="https://jacksonclarke.github.io/wdd131/character/character.html"
     />
-    <!-- TODO -->
-    <meta property="og:image" content="" />
-    <!-- TODO -->
+    <meta
+      property="og:image"
+      content="https://jacksonclarke.github.io/wdd131/character/1200x630lizard.jpg"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,15 +28,15 @@
       name="twitter:description"
       content="A Character Card showing a lizard dude"
     />
-    <meta name="twitter:image" content="" />
-    <!-- TODO -->
+    <meta
+      name="twitter:image"
+      content="https://jacksonclarke.github.io/wdd131/character/1200x630lizard.jpg"
+    />
 
     <!-- One favicon (ICO works everywhere) -->
     <link rel="icon" href="SwirlFavicon.ico" />
-    <!-- TODO -->
     <!-- One Apple Touch Icon (iOS home screen) -->
-    <link rel="apple-touch-icon" href="" />
-    <!-- TODO -->
+    <link rel="apple-touch-icon" href="lizard_180x180.png" />
 
     <!-- og stands for Open Graph, a format developed by Facebook that many social media sites understand now. 
      There are a lot of options for properties to include. The list above is considered a good starting point for most sites.
@@ -50,16 +50,18 @@
     <title>Character Card</title>
   </head>
   <body>
-    <div class="card">
-      <img class="image" src="" alt="" />
-      <h2 class="name"></h2>
-      <div class="stats">
-        <p class="stats" id="stat"></p>
+    <main>
+      <div class="card">
+        <img class="image" src="" alt="" />
+        <h2 class="name"></h2>
+        <div class="stats">
+          <p class="stats" id="stat"></p>
+        </div>
+        <div class="buttons">
+          <button id="attack">Attack</button>
+          <button id="levelUp">Level Up</button>
+        </div>
       </div>
-      <div class="buttons">
-        <button id="attack">Attack</button>
-        <button id="levelUp">Level Up</button>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
