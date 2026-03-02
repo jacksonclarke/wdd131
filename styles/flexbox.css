@@ -34,13 +34,13 @@ hr {
 }
 
 .gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .gallery > * {
-    flex: 0 1 460px;
+  flex: 0 1 460px;
 }
 
 @media screen and (min-width: 700px) {
@@ -52,5 +52,14 @@ hr {
   }
   .media-card {
     flex-direction: row;
+  }
+  .gallery > * {
+    flex: 0 1 460px;
+  }
+  .media-card-image {
+    flex: 1 1 300px;
+  }
+  .media-card-content {
+    flex: 0 1 60ch;
   }
 }
