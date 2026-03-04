@@ -23,7 +23,70 @@
     <!-- One Apple Touch Icon (iOS home screen) -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <meta name="author" content="Jackson Clarke" />
+    <link rel="stylesheet" href="recipes.css" />
     <title>Recipes</title>
   </head>
-  <body></body>
+  <header>
+    <div class="container">
+      <img src="images/images/recipe-book.png" alt="Recipe Logo" />
+      <h1>RecipeBook</h1>
+    </div>
+  </header>
+  <main>
+    <body>
+      <div class="container">
+        <div class="search-wrapper">
+          <input type="text" placeholder="Find a recipe" />
+          <button type="button">
+            <img src="images/images/search.svg" alt="Search" />
+          </button>
+        </div>
+        <div class="recipe">
+          <img
+            src="images/images/apple-crisp.jpg"
+            alt="Picture of an apple crisp"
+          />
+          <div class="recipe-info">
+            <button class="tag">dessert</button>
+            <h2>Apple Crisp</h2>
+            <span
+              class="rating"
+              role="img"
+              aria-label="Rating: 4 out of 5 stars"
+            >
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p class="description">
+              This apple crisp is a delicious and easy-to-make dessert that's
+              perfect for fall and winter. Best served warm with a scoop of
+              vanilla ice cream.
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="social">
+        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+        <a href="#"
+          ><img src="images/images/instagram_icon.svg" alt="instagram icon"
+        /></a>
+        <a href="#"
+          ><img src="images/images/youtube_icon.svg" alt="youtube icon"
+        /></a>
+        <a href="#"
+          ><img src="images/images/pinterest_icon.svg" alt="pinterest icon"
+        /></a>
+      </div>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
+        >Recipe icons created by Freepik - Flaticon</a
+      >
+    </div>
+  </footer>
 </html>
