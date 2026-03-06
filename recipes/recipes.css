@@ -139,7 +139,7 @@ main {
   & h2 {
     font-variant: small-caps;
     font-size: 1.2rem;
-    color: #4db3d4;
+    color: #167b9d;
     padding: 0 12px 6px;
   }
 
@@ -206,7 +206,7 @@ footer {
 
   & > a {
     font-size: 0.75rem;
-    color: #4db3d4;
+    color: #167b9d;
     text-decoration: none;
   }
 
