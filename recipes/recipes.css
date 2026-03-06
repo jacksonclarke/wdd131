@@ -114,6 +114,9 @@ main {
 .recipe {
   display: flex;
   flex-direction: column;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
 
   & > img {
     width: 100%;
@@ -242,10 +245,3 @@ footer {
   }
 }
 
-/* === Shared Container === */
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-}
