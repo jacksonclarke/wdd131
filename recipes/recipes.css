@@ -1,18 +1,7 @@
-/* === Reset & Base === */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  @media (min-width: 600px) {
-    /* width: 600px; */
-    /* margin: 0 auto; */
-    /* max-width: 680px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%; */
-  }
 }
 
 body {
@@ -21,7 +10,6 @@ body {
   color: #333;
 }
 
-/* === Header === */
 header {
   display: flex;
   flex-direction: column;
@@ -55,7 +43,6 @@ header {
     width: 100%;
     max-width: none;
     margin-bottom: 16px;
-    /* border-bottom: 1px solid #ccc; */
   }
 
   @media (min-width: 600px) {
@@ -63,7 +50,6 @@ header {
   }
 }
 
-/* === Search === */
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -106,7 +92,6 @@ header {
   }
 }
 
-/* === Main === */
 main {
   max-width: 680px;
   margin: 0 auto;
@@ -118,7 +103,6 @@ main {
   }
 }
 
-/* === Recipe Card === */
 .recipe {
   display: flex;
   flex-direction: column;
@@ -138,7 +122,6 @@ main {
     margin: 0 auto;
     display: block;
     padding: 12px;
-    
   }
 
   & .tag {
@@ -211,7 +194,6 @@ main {
   }
 }
 
-/* === Footer === */
 footer {
   display: flex;
   flex-direction: column;
@@ -251,9 +233,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #333; */
-    /* border-radius: 2px; */
-    /* padding: 2px; */
     width: 36px;
     height: 36px;
 
@@ -264,4 +243,3 @@ footer {
     }
   }
 }
-
